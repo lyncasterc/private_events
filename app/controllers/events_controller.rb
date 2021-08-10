@@ -8,6 +8,17 @@ class EventsController < ApplicationController
   def show
   end
 
+  def attend
+    @event = Event.find(params[:id])
+
+    attendees_events = AttendeesEvent.new(attendee_id: current_user.id, event_id: @event.id)
+    if attendees_events.save
+      redirect_to @event, notice: "You are now attending this event!"
+    else
+      redirect_to @event, alert: "You are already attending this event!"
+    end
+  end
+
   def new
     @event = current_user.created_events.build
   end
