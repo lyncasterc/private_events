@@ -14,8 +14,19 @@
  *= require_self
  */
 
+
+
+$navbar-breakpoint: 0;
 @import "bulma";
+
 
 .notification:not(:last-child){
     margin-bottom: 0px;
+}
+
+#main-hero{
+    background-image: url(./images/main-hero.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
