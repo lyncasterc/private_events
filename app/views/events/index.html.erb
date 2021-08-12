@@ -25,7 +25,7 @@
                                 <div class="card-content">
                                     <div class="content">
                                         <p class="has-text-weight-semibold is-size-6 event-title"> <%= event.title %> </p>
-                                        <p class="event-date has-text-link"> <%= event.date.strftime("%a, %b %d, %I:%M %p") if event.date %> </p>
+                                        <p class="event-date has-text-danger"> <%= event.date.strftime("%a, %b %d, %I:%M %p") if event.date %> </p>
                                     <% end %>
 
                                     <p class="has-text-grey"> Location goes here </p>
@@ -40,12 +40,3 @@
     </div>
 </section>
 
-
-<h1>Events</h1>
-<%= link_to 'Sign in', new_user_session_path %>
-<%= link_to 'Sign up', new_user_registration_path %>
-<%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
-
-<% @events.each do |event| %>
-    <p> <%= event.title %> </p>
-<% end %>
