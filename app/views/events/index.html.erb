@@ -10,29 +10,31 @@
 <section id="events-container" class=section>
     <div class="container">
         <h2 class="title is-3">Upcoming Events</h2>
+            <div class="columns is-multiline is-variable is-5">
 
-        <div class="columns is-multiline is-variable is-5">
-            <div class="column is-one-quarter">
-                <div class="card">
-                    <div class="card-image">
-                        <figure class="image is-16by9">
-                            <img src="https://bulma.io/images/placeholders/1280x960.png" alt="">
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <div class="content">
-                            <p class="has-text-weight-semibold is-size-6 event-title"> Concert </p>
-                            <p class="event-date has-text-link"> <%= @events.last.date.strftime("%a, %b %d, %I:%M %p") %> </p>
-                            
+                <% @events.each do |event| %>
+
+                    <div class="column is-one-quarter">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-16by9">
+                                    <img src="https://bulma.io/images/placeholders/1280x960.png" alt="">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <p class="has-text-weight-semibold is-size-6 event-title"> <%= event.title %> </p>
+                                    <p class="event-date has-text-link"> <%= event.date.strftime("%a, %b %d, %I:%M %p") if event.date %> </p>
+                                    <p class="has-text-grey"> Location goes here </p>
+                                    <p class="has-text-weight-normal mt-3 "> Creator name </p>
+                                    
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+
+                <% end %>
             </div>
-
-            
-
-        </div>
-
     </div>
 </section>
 
