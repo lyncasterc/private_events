@@ -24,9 +24,37 @@ $navbar-breakpoint: 0;
     margin-bottom: 0px;
 }
 
+// todo: write media queries for this, look at eventbrite
 #main-hero{
-    background-image: url(./images/main-hero.jpg);
+    background-image: url(main-hero.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    align-items: center !important;
+    justify-content: center !important;
 }
+
+// todo: center main hero text vertically. Flex the container?
+#main-hero-text{
+    color: #fff;
+    font-size: 4rem !important;
+}
+
+.card{
+    border-radius: 10px !important;
+}
+
+#events-container .column{
+    margin-bottom: .75rem;
+}
+
+// height for events card content
+#events-container .column .card-content{
+    min-height: 150px;
+}
+
+#events-container .column .card-content .content p{
+    margin-bottom: 5px;
+}
+
+
