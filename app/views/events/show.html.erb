@@ -1,0 +1,58 @@
+<section class=" show-header section is-medium">
+
+    <div class="container">
+        <div class="columns">
+            <div class="column is-8">
+                <h1 class="title"> <%= @event.title %> </h1>
+                <div class="media">
+                    <figure class="media-left">
+                        <p class="image is-64x64">
+                            <img class="is-rounded" src="https://bulma.io/images/placeholders/64x64.png">
+                        </p>
+                    </figure>
+                    <div class="media-content">
+                        <div class="content">
+                            <p > Hosted by <br> <span class="has-text-weight-semibold"> Creator name</span> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+</section>
+
+<section class="section show-main">
+    <div class="container">
+        <div class="columns is-centered reverse-columns ">
+
+            <div class="column is-two-thirds">
+                <div class="content event-description">
+                    <h2 class="subtitle"> About this event </h2>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur assumenda voluptas aperiam nisi soluta recusandae esse pariatur repellat aliquid voluptates! Magni laborum hic asperiores possimus eum modi minus fuga atque. </p>
+                </div>
+            </div>
+
+            <div class="column">
+
+                <%= link_to 'Attend', "/events/#{@event.id}/attend", class: "attend-btn button is-danger mb-4 is-medium" %>
+
+                <div class="box">
+                    <div class="media">
+                        <div class="media-left">
+                            <img src="https://img.icons8.com/material-outlined/50/000000/clock--v1.png"/>
+                        </div>
+                        <div class="media-content">
+                            <p> <%=@event.date.strftime("%A, %B %d, %Y ")%> <br> <%= @event.date.strftime("%I:%M %p") %> </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+

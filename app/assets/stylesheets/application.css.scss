@@ -24,6 +24,14 @@ $navbar-breakpoint: 0;
     margin-bottom: 0px;
 }
 
+body,html{
+    background: #f8f8f8;
+}
+
+nav{
+    padding: 10px;
+}
+
 // todo: write media queries for this, look at eventbrite
 #main-hero{
     background-image: url(main-hero.jpg);
@@ -40,6 +48,7 @@ $navbar-breakpoint: 0;
     font-size: 4rem !important;
 }
 
+// event cards 
 .card{
     border-radius: 10px !important;
 }
@@ -59,4 +68,33 @@ $navbar-breakpoint: 0;
 
 #events-container .column .card{
     height: 100%;
+}
+
+// Show
+.show-header{
+    background-color: white;
+    padding: 20px 20px !important;
+    border-top: 1px solid rgba(46,62,72,.12);
+    border-bottom: 1px solid rgba(46,62,72,.12);
+
+}
+
+.event-description{
+    max-width: 70%;
+}
+
+.event-description p{
+    white-space: pre-line !important;
+    font-size: 18px;
+}
+
+.attend-btn{
+    width: 100%;
+}
+
+@media(max-width: 767px){
+    .reverse-columns{
+        flex-direction: column-reverse;
+        display: flex;
+    }
 }
