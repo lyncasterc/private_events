@@ -31,6 +31,26 @@
                     <h2 class="subtitle"> About this event </h2>
                     <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur assumenda voluptas aperiam nisi soluta recusandae esse pariatur repellat aliquid voluptates! Magni laborum hic asperiores possimus eum modi minus fuga atque. </p>
                 </div>
+
+                <div class="block attendees">
+                    <h3 class="title"> Attendees (<%= @event.attendees.count %>) </h3>
+                    <div class="columns is-multiline is-variable is-mobile">
+                        <% @event.attendees.each do |attendee| %>
+                            <div class="column is-one-quarter ">
+                                <div class="card ">
+                                    <div class="card-image">
+                                        <figure class="image is-64x64">
+                                            <img class="is-rounded" src="https://bulma.io/images/placeholders/64x64.png">
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <p class="has-text-weight-semibold"> Attendee name </p>
+                                    </div>
+                                </div>
+                            </div>
+                        <% end %> 
+                    </div>
+                </div>
             </div>
 
             <div class="column">
@@ -46,10 +66,8 @@
                             <p> <%=@event.date.strftime("%A, %B %d, %Y ")%> <br> <%= @event.date.strftime("%I:%M %p") %> </p>
                         </div>
                     </div>
-
                 </div>
             </div>
-
         </div>
     </div>
 </section>

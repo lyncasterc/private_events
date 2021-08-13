@@ -48,7 +48,7 @@ nav{
     font-size: 4rem !important;
 }
 
-// event cards 
+// index event cards 
 .card{
     border-radius: 10px !important;
 }
@@ -70,6 +70,10 @@ nav{
     height: 100%;
 }
 
+.event-date{
+    font-size: 13.5px;
+}
+
 // Show
 .show-header{
     background-color: white;
@@ -79,7 +83,7 @@ nav{
 
 }
 
-.event-description{
+.event-description, .attendees{
     max-width: 70%;
 }
 
@@ -91,10 +95,29 @@ nav{
 .attend-btn{
     width: 100%;
 }
+.attendees h3{
+    font-size: 1.75rem;
+}
 
-@media(max-width: 767px){
+// todo: this needs media queries
+// .attendees .column{
+// }
+
+.attendees .card-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+
+}
+
+@media(max-width: 768px){
     .reverse-columns{
         flex-direction: column-reverse;
         display: flex;
+    }
+
+    .attendees .column{
+        width: 40% !important;
     }
 }
