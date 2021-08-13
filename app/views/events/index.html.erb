@@ -25,11 +25,11 @@
                                 <div class="card-content">
                                     <div class="content">
                                         <p class="has-text-weight-semibold is-size-6 event-title"> <%= event.title %> </p>
-                                        <p class="event-date has-text-danger"> <%= event.date.strftime("%a, %b %d, %I:%M %p") if event.date %> </p>
+                                        <p class="event-date has-text-danger has-text-weight-medium"> <%= event.date.strftime("%a, %b %d, %I:%M %p") if event.date %> </p>
                                     <% end %>
 
                                     <p class="has-text-grey"> Location goes here </p>
-                                    <p class="has-text-weight-normal mt-3 "> Creator name </p>
+                                    <p class="has-text-weight-semibold mt-3 "> Creator name </p>
                                 </div>
                             </div>
                         </div>
