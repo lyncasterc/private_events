@@ -19,13 +19,17 @@
                             <%= link_to event do %>
                                 <div class="card-image">
                                     <figure class="image is-16by9">
-                                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="">
+                                        <% if event.image %>
+                                            <%= image_tag(event.image) %>
+                                        <% else %>
+                                            <img src="https://bulma.io/images/placeholders/1280x960.png" alt="placeholder">
+                                        <% end %>
                                     </figure>
                                 </div>
                                 <div class="card-content">
                                     <div class="content">
                                         <p class="has-text-weight-semibold is-size-6 event-title"> <%= event.title %> </p>
-                                        <p class="event-date has-text-danger has-text-weight-medium"> <%= event.date.strftime("%a, %b %d, %I:%M %p") if event.date %> </p>
+                                        <p class="event-date has-text-danger has-text-weight-medium"> <%= event.date.strftime("%a, %b %d,") if event.date %> <%= event.time.strftime("%I:%M %p") if event.time %> </p>
                                     <% end %>
 
                                     <p class="has-text-grey"> Location goes here </p>
