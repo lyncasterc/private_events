@@ -111,17 +111,6 @@ nav{
 
 }
 
-@media(max-width: 768px){
-    .reverse-columns{
-        flex-direction: column-reverse;
-        display: flex;
-    }
-
-    .attendees .column{
-        width: 40% !important;
-    }
-}
-
 // events form
 form abbr[title] {
     border-bottom: none !important;
@@ -134,3 +123,60 @@ form abbr[title] {
     width: 200px;
     outline: none !important;
 }
+
+// sign up form
+#signup-bg{
+    background-image: url(signup2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#signup-bg-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#signup-bg-content .button{
+    opacity: 0.75;
+    padding-left: 1.5em !important;
+    padding-right: 1.5em !important;
+}
+#signup-bg-button-text{
+    color: #fff !important;
+    font-weight: 500 !important;
+}
+
+#signup-form-container{
+    max-width: 50%;
+}
+
+#signup-bg h2{
+    color:#fff;
+}
+
+@media(max-width: 768px){
+    .reverse-columns{
+        flex-direction: column-reverse;
+        display: flex;
+    }
+
+    .attendees .column{
+        width: 40% !important;
+    }
+}
+
+@media(max-width: 960px){
+    #signup-bg{
+        display: none;
+    }
+    
+        
+}
+
+
