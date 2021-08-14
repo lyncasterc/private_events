@@ -1,7 +1,9 @@
 <h1>Users#show</h1>
 <p>Find me in app/views/users/show.html.erb</p>
 
-<% current_user.created_events.each do |event| %>
+<%= @user.email %>
+
+<% @user.created_events.each do |event| %>
     <%= event.title %>
     <%= event.description %>
 <% end %>

@@ -29,7 +29,7 @@
             <div class="column is-two-thirds">
                 <div class="content event-description">
                     <h2 class="subtitle"> About this event </h2>
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur assumenda voluptas aperiam nisi soluta recusandae esse pariatur repellat aliquid voluptates! Magni laborum hic asperiores possimus eum modi minus fuga atque. </p>
+                    <p> <%= @event.description %> </p>
                 </div>
 
                 <div class="block attendees">
@@ -63,7 +63,7 @@
                             <img src="https://img.icons8.com/material-outlined/50/000000/clock--v1.png"/>
                         </div>
                         <div class="media-content">
-                            <p> <%=@event.date.strftime("%A, %B %d, %Y ")%> <br> <%= @event.date.strftime("%I:%M %p") %> </p>
+                            <p> <%=@event.date.strftime("%A, %B %d, %Y ")%> <br> <%= @event.time.strftime("%I:%M %p") %> </p>
                         </div>
                     </div>
                 </div>
