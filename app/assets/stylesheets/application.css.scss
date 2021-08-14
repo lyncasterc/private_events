@@ -121,3 +121,16 @@ nav{
         width: 40% !important;
     }
 }
+
+// events form
+form abbr[title] {
+    border-bottom: none !important;
+    text-decoration: none !important;
+    color: hsl(348, 100%, 61%) !important;
+}
+// file upload btn
+.file-style{
+    display: block;
+    width: 200px;
+    outline: none !important;
+}

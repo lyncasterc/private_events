@@ -1,0 +1,47 @@
+<%= simple_form_for @event do |f| %>
+
+    <%= f.error_notification %>
+
+    <div class="field">
+        <div class="control">
+            <%= f.input :title, wrapper: false, required:true, input_html: { class: "input" }, label_html: { class: "label" } %>
+        </div>
+    </div>
+    <div class="field">
+        <div class="control">
+            <%= f.input :description, wrapper: false, required: true, input_html: { class: "textarea" }, label_html: { class: "label" } %>
+
+        </div>
+    </div>
+
+    <div class="field">
+        <div class="control">
+            <%= f.input :location, wrapper: false, required:true, input_html: { class: "input" }, label_html: { class: "label" } %>
+        </div>
+    </div>
+
+    <div class="field">
+        <div class="control">
+            <%= f.input :date, wrapper: false, label_html: { class: "label" }, html5: true, required: true %> 
+        </div>
+    </div>
+    
+    <div class="field">
+        <div class="control">
+            <%= f.input :time, wrapper: false, label_html: { class: "label" }, html5: true, required: true%> 
+        </div>
+    </div>
+    
+    <div class="file">
+        <div class="control">
+            <%= f.input :image, wrapper: false, label_html: {class: "label"} %>
+        </div>
+    </div>
+
+    <div class="field">
+        <div class="control">
+            <%= f.button :submit, wrapper: false, class: "button is-danger mt-5" %>
+        </div>
+    </div>
+
+<% end %>
