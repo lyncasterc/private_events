@@ -28,6 +28,10 @@ body,html{
     background: #f8f8f8;
 }
 
+.jcc {
+    justify-content: center;
+}
+
 nav{
     padding: 10px;
 }
@@ -158,6 +162,13 @@ form abbr[title] {
 
 #signup-bg h2{
     color:#fff;
+}
+
+.hint{
+    color: hsl(0, 0%, 48%)
+}
+.error{
+    color: hsl(348, 100%, 61%);
 }
 
 @media(max-width: 768px){
