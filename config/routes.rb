@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :attendees_events, only: [:new, :create, :destroy]
     member do
       get 'attend'
+      get 'unattend'
     end
   end
 
