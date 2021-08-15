@@ -4,11 +4,13 @@ Rails.application.routes.draw do
   
   resources :events do
     resources :attendees_events, only: [:new, :create, :destroy]
+    member do
+      get 'attend'
+    end
   end
 
   resources :users, only: [:show]
     
-  get '/events/:id/attend', to: 'events#attend'
   get '/users/edit/delete_user_image', to: 'users#delete_user_image'
   
 

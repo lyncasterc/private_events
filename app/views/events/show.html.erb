@@ -62,7 +62,7 @@
 
             <div class="column">
 
-                <%= link_to 'Attend', "/events/#{@event.id}/attend", class: "attend-btn button is-danger mb-4 is-medium" %>
+                <%= link_to 'Attend', attend_event_path(@event.id), class: "attend-btn button is-danger mb-4 is-medium" %>
 
                 <div class="box">
                     <div class="media">
