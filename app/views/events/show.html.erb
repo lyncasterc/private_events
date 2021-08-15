@@ -46,12 +46,15 @@
                                 <div class="card ">
                                     <div class="card-image">
                                         <figure class="image is-64x64">
-                                            
-                                            <img class="is-rounded" src="https://bulma.io/images/placeholders/64x64.png">
+                                            <% if attendee.image.attached? %>
+                                                <%= image_tag attendee.image, class:"is-rounded" %>
+                                            <% else %>
+                                                <img class="is-rounded" src="https://bulma.io/images/placeholders/64x64.png">
+                                            <% end %>
                                         </figure>
                                     </div>
                                     <div class="card-content">
-                                        <p class="has-text-weight-semibold"> Attendee name </p>
+                                        <p class="has-text-weight-semibold has-text-centered"> <%= attendee.name %> </p>
                                     </div>
                                 </div>
                             </div>
