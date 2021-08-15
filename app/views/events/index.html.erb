@@ -19,7 +19,7 @@
                             <%= link_to event do %>
                                 <div class="card-image">
                                     <figure class="image is-16by9">
-                                        <% if event.image %>
+                                        <% if event.image.attached? %>
                                             <%= image_tag(event.image) %>
                                         <% else %>
                                             <img src="https://bulma.io/images/placeholders/1280x960.png" alt="placeholder">
