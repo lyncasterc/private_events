@@ -101,6 +101,15 @@ nav{
 
 }
 
+.show-header .media{
+    max-width: fit-content;
+    margin: 0 !important;
+}
+
+.remove-links-color a{
+    color: inherit
+}
+
 .event-description, .attendees{
     max-width: 70%;
 }

@@ -17,8 +17,12 @@
                         </p>
                     </figure>
                     <div class="media-content">
-                        <div class="content">
-                            <p > Hosted by <br> <span class="has-text-weight-semibold"> <%= @event.creator.name %></span> </p>
+                        <div class="content remove-links-color">
+
+                            <%= link_to user_path(@event.creator.id)  do %>
+                                <p> Hosted by <br> <span class="has-text-weight-semibold"> <%= @event.creator.name %>  </span> </p>
+                            <% end %>
+
                         </div>
                     </div>
                 </div>

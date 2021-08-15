@@ -15,11 +15,11 @@
                 <% @events.each do |event| %>
 
                     <div class="column is-one-quarter">
-                        <div class="card">
+                        <div class="card remove-links-color">
                             <%= link_to event do %>
                                 <div class="card-image">
                                     <figure class="image is-16by9">
-                                        <% if event.image.attached? %>
+                                        <% if event.image %>
                                             <%= image_tag(event.image) %>
                                         <% else %>
                                             <img src="https://bulma.io/images/placeholders/1280x960.png" alt="placeholder">
