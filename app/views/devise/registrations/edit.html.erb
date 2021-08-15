@@ -8,6 +8,48 @@
           <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
             <%= f.error_notification %>
 
+              <div class="field">
+                <div class="control">
+                  <div class="media">
+                    <figure class="media-left">
+                      <p class="image is-64x64">
+                        <% if resource.image.attached? %>
+                          <%= image_tag resource.image, class: "is-rounded" %>
+                        <% else %>
+                          <img class="is-rounded" src="https://bulma.io/images/placeholders/64x64.png">
+                        <% end %>
+                      </p>
+                    </figure>
+                    <div class="media-content">
+
+
+                      <div class="field is-grouped">
+                        <div class="control">
+                          <div class="file is-normal is-danger mt-4">
+                            <label class="file-label">
+                                <%= f.input_field :image, class: "file-input" %> 
+                                <span class="file-cta">
+                                <span class="file-label">
+                                  Upload a Picture
+                                </span>
+                              </span>
+                            </label>
+                        </div>
+                      </div>
+
+                      <div class="control">
+                        <% if resource.image.attached? %>
+                          <%= link_to 'Remove', users_edit_delete_user_image_path, class: "button is-light mt-4" %>
+                        <% end %>
+                      </div>
+                    
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <span class="hint image-hint mb-4 ">New image will appear after saving changes</span>
 
               <div class="field">
                 <div class="control">
@@ -55,7 +97,7 @@
 
               <div class="field">
                 <div class="control">
-                  <%= f.button :submit, "Update", class: "button is-medium is-danger mb-4" %>
+                  <%= f.button :submit, "Save Changes", class: "button is-medium is-danger mb-4" %>
                 </div>
               </div>
 

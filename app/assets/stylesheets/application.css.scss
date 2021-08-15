@@ -32,6 +32,13 @@ body,html{
     justify-content: center;
 }
 
+.hint{
+    color: hsl(0, 0%, 48%)
+}
+.error{
+    color: hsl(348, 100%, 61%);
+}
+
 nav{
     padding: 10px;
 }
@@ -164,12 +171,12 @@ form abbr[title] {
     color:#fff;
 }
 
-.hint{
-    color: hsl(0, 0%, 48%)
+//Users edit
+.image-hint{
+    display: inline-block;
 }
-.error{
-    color: hsl(348, 100%, 61%);
-}
+
+
 
 @media(max-width: 768px){
     .reverse-columns{
