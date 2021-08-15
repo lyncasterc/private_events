@@ -28,6 +28,13 @@ body,html{
     background: #f8f8f8;
 }
 
+html{
+    background-image: 
+        url(main-hero-s.jpg),
+        url(signup2-alt.jpg);
+    background-size: 0 0;
+}
+
 .jcc {
     justify-content: center;
 }
@@ -45,7 +52,7 @@ nav{
 
 // todo: write media queries for this, look at eventbrite
 #main-hero{
-    background-image: url(main-hero.jpg);
+    background-image: url(main-hero-s.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -137,7 +144,7 @@ form abbr[title] {
 
 // sign up form
 #signup-bg{
-    background-image: url(signup2.jpg);
+    background-image: url(signup2-alt.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
