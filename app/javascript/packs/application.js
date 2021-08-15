@@ -11,3 +11,20 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+const observer = new MutationObserver(mutations_list =>{
+    mutations_list.forEach(mutation => {
+        mutation.addedNodes.forEach(added_node => {
+            if(added_node.querySelector('.delete')){
+                const button = added_node.querySelector('.delete');
+                button.addEventListener('click', (e) =>{
+                    e.target.parentElement.remove();
+                    
+                })
+            }
+        });
+    });
+});
+
+const container = document.documentElement || document.body;
+observer.observe(container, { childList: true });
