@@ -31,7 +31,8 @@ body,html{
 html{
     background-image: 
         url(main-hero-s.jpg),
-        url(signup2-alt.jpg);
+        url(signup2-alt.jpg),
+        url(signin-bg.jpg);
     background-size: 0 0;
 }
 
@@ -44,6 +45,10 @@ html{
 }
 .error{
     color: hsl(348, 100%, 61%);
+}
+
+.mw-50{
+    max-width: 50% !important;
 }
 
 nav{
@@ -152,8 +157,9 @@ form abbr[title] {
 }
 
 // sign up form
-#signup-bg{
-    background-image: url(signup2-alt.jpg);
+#signup-form-bg{
+    background-image: url(signup2-alt.jpg), linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25));
+    background-blend-mode: overlay;;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -169,7 +175,7 @@ form abbr[title] {
     align-items: center;
 }
 
-#signup-bg-content .button{
+#signup-bg-content .button, #signin-bg-content .button{
     opacity: 0.75;
     padding-left: 1.5em !important;
     padding-right: 1.5em !important;
@@ -179,13 +185,51 @@ form abbr[title] {
     font-weight: 500 !important;
 }
 
-#signup-form-container{
-    max-width: 50%;
+
+
+#signup-form-bg h2{
+    color:#fff;
+    opacity: .95;
 }
 
-#signup-bg h2{
-    color:#fff;
+
+// signin form
+#signin-form-bg{
+    background-image: url(signin-bg.jpg), linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45));
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
 }
+#signin-bg-content h2{
+    color:#fff;
+    opacity: .95;
+    margin: 5px !important;
+}
+#signin-bg-content {
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#signin-bg-content p{
+    color:#fff;
+    opacity: .85;
+}
+// .bg-overlay{
+//     background-color: rgba(0, 0, 0, 0.8);
+//     height: 100%;
+//     width: 100%;
+//     position:fixed ;
+//     z-index: -1;
+// }
+
 
 //Users edit
 .image-hint{

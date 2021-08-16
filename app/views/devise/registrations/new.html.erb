@@ -1,9 +1,9 @@
 <div class="columns is-gapless m-0 is-vcentered">
-  <div id="signup-bg" class="column is-5">
-    <h2 class="title has-text-centered is-size-2 mt-5"> Eventlite </h2>
+  <div id="signup-form-bg"  class="column is-5">
+    <h2 class="title has-text-centered is-size-3 mt-5"> Eventlite </h2>
 
     <div id="signup-bg-content" class="container p-5">
-      <h2 class="title has-text-centered is-size-1"> Welcome Back!</h2>
+      <h2 class="title has-text-centered is-size-2"> Welcome Back!</h2>
         <%= link_to new_user_session_path, class: "button is-medium is-dark" do %>
           <span id="signup-bg-button-text"> Sign In </span>
         <% end %>
@@ -12,7 +12,7 @@
   </div>
 
       <div class="column signup-form-col">
-        <div id="signup-form-container" class="container p-6">
+        <div id="signup-form-container" class="container p-6 mw-50">
           <h1 class="title">Create Account</h1>
           <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
             <%= f.error_notification %>
