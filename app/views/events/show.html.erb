@@ -71,7 +71,7 @@
 
             <div class="column">
 
-                <% if AttendeesEvent.exists?(attendee_id: current_user.id, event_id: @event.id) %>
+                <% if  user_signed_in? && AttendeesEvent.exists?(attendee_id: current_user.id, event_id: @event.id) %>
                     <%= link_to 'Unattend', unattend_event_path(@event.id), 
                                             class: "attend-btn button is-danger is-light mb-4 is-medium" %>
                 <% else %>
