@@ -38,18 +38,41 @@
             <div class="navbar-end">
               <div class="navbar-item">
                 <div class="field is-grouped">
-
                   <% if user_signed_in? %>
                     <%= link_to 'Create Event', new_event_path, class: "button is-danger control" %>
-                    <%= link_to current_user.name, edit_user_registration_path, class: "button is-white control" %>
-                    <%= link_to "Sign Out", destroy_user_session_path, method: :delete,  class: "button is-danger control is-light" %>
+                   
                   <% else %>
-                    <%= link_to "Login", new_user_session_path, class: "button is-white control" %>
+                    <%= link_to "Sign In", new_user_session_path, class: "button is-white control" %>
                     <%= link_to "Sign Up", new_user_registration_path, class: "button is-danger is-light control" %>
                   <% end %>
                   
                 </div>
               </div>
+
+              <% if user_signed_in? %>
+                <div class="navbar-item has-dropdown is-hoverable">
+                  <a class="navbar-link">
+                      <% if current_user.image.attached? %>
+                        <%= image_tag current_user.image, class: "navbar-profile-img" %>
+                      <% else %>
+                        <img class="is-rounded" src="https://img.icons8.com/ios-glyphs/60/000000/user--v1.png"/>
+                      <% end %>
+                    
+                  </a>
+
+                  <div class="navbar-dropdown is-right">
+                    <%= link_to 'Profile', user_path(current_user.id), class:"navbar-item" %>
+
+                    <%= link_to 'Settings', edit_user_registration_path, class:"navbar-item" %>
+                    
+                    <hr class="navbar-divider">
+                    <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"navbar-item" %>
+                  </div>
+
+                </div>
+              <% end  %>
+              
+              
             </div>
           </div>
         </nav>
