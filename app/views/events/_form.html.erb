@@ -34,7 +34,18 @@
     
     <div class="file">
         <div class="control">
-            <%= f.input :image, wrapper: false, label_html: {class: "label"}, required: true %>
+            <%= f.label :image, class: "label m-0", required: true %> <br>
+            <div class="file is-normal">
+                <label class="file-label">
+                    
+                    <%= f.input_field :image, class: "file-input" %> 
+                    <span class="file-cta">
+                    <span class="file-label">
+                        Upload a Picture
+                    </span>
+                    </span>
+                </label>
+            </div>
         </div>
     </div>
 
