@@ -61,6 +61,12 @@ html{
 .remove-links-color a{
     color: inherit
 }
+.card{
+    transition: all 150ms ease-in;
+}
+.card:hover{
+    box-shadow: 0 0.5em 1.5em 0.300em rgba(10, 10, 10, 0.1), 0 0px 1.5em 5px rgba(10, 10, 10, 0.02);
+}
 
 nav{
     border-bottom: 1px solid rgba(46,62,72,.12)
