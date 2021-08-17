@@ -4,5 +4,5 @@ class Event < ApplicationRecord
   has_many :attendees, through: :attendees_events, dependent: :destroy
   has_one_attached :image
 
-  validates :title, :description, :date, :time, :location, presence: true
+  validates :title, :description, :date, :time, :location, :image, presence: true
 end
