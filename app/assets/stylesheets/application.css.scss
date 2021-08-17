@@ -50,17 +50,35 @@ html{
 .mw-50{
     max-width: 50% !important;
 }
+.has-border-bottom{
+    border-bottom: 1px solid rgba(46,62,72,.12);
+}
+.has-border-top-bottom{
+    border-top: 1px solid rgba(46,62,72,.12);
+    border-bottom: 1px solid rgba(46,62,72,.12);
+}
+
+.remove-links-color a{
+    color: inherit
+}
 
 nav{
     padding: 10px;
+    border-bottom: 1px solid rgba(46,62,72,.12)
 }
 
 // todo: write media queries for this, look at eventbrite
 #main-hero{
-    background-image: url(main-hero-s.jpg);
+    background-image: url(main-hero-s.jpg), linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
+    background-blend-mode: overlay;;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#main-hero .container{
+    display: flex;
+    flex-direction: column;
     align-items: center !important;
     justify-content: center !important;
 }
@@ -68,7 +86,8 @@ nav{
 // todo: center main hero text vertically. Flex the container?
 #main-hero-text{
     color: #fff;
-    font-size: 4rem !important;
+    font-size: 3.5rem !important;
+    opacity: .95;
 }
 
 // index event cards 
@@ -111,9 +130,7 @@ nav{
     margin: 0 !important;
 }
 
-.remove-links-color a{
-    color: inherit
-}
+
 
 .event-description, .attendees{
     max-width: 70%;
@@ -222,20 +239,35 @@ form abbr[title] {
     color:#fff;
     opacity: .85;
 }
-// .bg-overlay{
-//     background-color: rgba(0, 0, 0, 0.8);
-//     height: 100%;
-//     width: 100%;
-//     position:fixed ;
-//     z-index: -1;
-// }
-
 
 //Users edit
 .image-hint{
     display: inline-block;
 }
 
+// User show
+.icon-text{
+    display: flex;
+}
+.la-calendar, .la-users{
+    font-size: 1.2rem;
+    font-weight: bold !important;
+}
+
+.profile-image{
+    height: 300px ;
+    width: 300px ;
+}
+
+.user-show-event .image{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user-show-event .media-content p:not(:last-child){
+    margin-bottom: 6px;
+}
 
 
 @media(max-width: 768px){
@@ -246,6 +278,18 @@ form abbr[title] {
 
     .attendees .column{
         width: 40% !important;
+    }
+    .profile-image{
+        height: 256px ;
+        width: 256px ;
+    }
+
+}
+@media(max-width: 428px){
+    
+    .profile-image{
+        height: 128px;
+        width: 128px;
     }
 }
 
