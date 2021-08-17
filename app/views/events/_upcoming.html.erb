@@ -1,0 +1,26 @@
+<% events.upcoming.each do |event| %>
+
+    <div class="column is-one-quarter">
+        <div class="card remove-links-color">
+            <%= link_to event do %>
+                <div class="card-image">
+                    <figure class="image is-16by9">
+                        <% if event.image.attached? %>
+                            <%= image_tag(event.image) %>
+                        <% end %>
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="content">
+                        <p class="has-text-weight-semibold is-size-6 event-title"> <%= event.title %> </p>
+                        <p class="event-date has-text-danger has-text-weight-medium"> <%= event.date.strftime("%a, %b %d,") %> <%= event.time.strftime("%I:%M %p") %> </p>
+                    <% end %>
+
+                    <p class="has-text-grey"> <%= event.location %> </p>
+                    <p class="has-text-weight-semibold mt-3 "> <%= event.creator.name %> </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<% end %>
