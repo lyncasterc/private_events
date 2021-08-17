@@ -71,12 +71,18 @@
 
             <div class="column">
 
-                <% if  user_signed_in? && AttendeesEvent.exists?(attendee_id: current_user.id, event_id: @event.id) %>
-                    <%= link_to 'Unattend', unattend_event_path(@event.id), 
-                                            class: "attend-btn button is-danger is-light mb-4 is-medium" %>
+                <% if @event.date.past? %>
+                    <button class="button is-danger is-medium mb-4 attend-btn" disabled>
+                        Event Has Passed!
+                    </button>
                 <% else %>
-                    <%= link_to 'Attend', attend_event_path(@event.id), 
-                                        class: "attend-btn button is-danger mb-4 is-medium" %>
+                    <% if  user_signed_in? && AttendeesEvent.exists?(attendee_id: current_user.id, event_id: @event.id) %>
+                        <%= link_to 'Unattend', unattend_event_path(@event.id), 
+                                                class: "attend-btn button is-danger is-light mb-4 is-medium" %>
+                    <% else %>
+                        <%= link_to 'Attend', attend_event_path(@event.id), 
+                                            class: "attend-btn button is-danger mb-4 is-medium" %>
+                    <% end %>
                 <% end %>
 
                 <div class="box">
