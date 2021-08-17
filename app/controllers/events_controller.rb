@@ -32,6 +32,9 @@ class EventsController < ApplicationController
     @event = current_user.created_events.build
   end
 
+  def edit
+  end
+
   def create
     @event = current_user.created_events.build(event_params)
 
@@ -44,6 +47,26 @@ class EventsController < ApplicationController
         format.json { render json: @event.errors, status: :unprocessable_entity }
       end
     end 
+  end
+
+  def update
+    respond_to do |format|
+      if @event.update(event_params)
+        format.html { redirect_to @event, notice: "Event updated!" }
+        format.json { render :show, status: :created, location: @event }
+      else
+        format.html { render :new, status: :unprocessable_entity }
+        format.json { render json: @event.errors, status: :unprocessable_entity }
+      end
+    end 
+  end
+
+  def destroy
+    @event.destroy
+    respond_to do |format|
+      format.html { redirect_to user_path(current_user.id), notice: "Event deleted!" }
+      format.json { head :no_content }
+    end
   end
 
   private
