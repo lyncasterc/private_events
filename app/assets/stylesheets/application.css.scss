@@ -310,6 +310,9 @@ form abbr[title] {
     .hero .is-halfheight, #main-hero{
         min-height: 25vh !important;
     }
+    #main-hero-text{
+        font-size: 3rem !important;
+    }
     
 
 }
@@ -323,6 +326,9 @@ form abbr[title] {
     }
     .card-column{
         width: 100% !important;
+    }
+    #main-hero-text{
+        font-size: 2.5rem !important;
     }
 }
 
