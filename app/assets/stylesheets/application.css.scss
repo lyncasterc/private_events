@@ -103,6 +103,7 @@ nav{
 .card{
     border-radius: 10px !important;
     transition: all 150ms ease-in;
+    height: 100%;
 
 }
 
@@ -121,10 +122,6 @@ nav{
 
 #events-container .column .card-content .content p{
     margin-bottom: 5px;
-}
-
-#events-container .column .card{
-    height: 100%;
 }
 
 .event-date{

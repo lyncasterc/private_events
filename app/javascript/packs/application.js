@@ -12,6 +12,14 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
+document.addEventListener('DOMContentLoaded', (e)=>{
+    document.querySelectorAll('.notification .delete').forEach(button =>{
+        button.addEventListener('click', (e)=>{
+            e.target.parentElement.remove();
+        })
+    })
+});
+
 const observer = new MutationObserver(mutations_list =>{
     mutations_list.forEach(mutation => {
         mutation.addedNodes.forEach(added_node => {
