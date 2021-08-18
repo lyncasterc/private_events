@@ -30,9 +30,9 @@ body,html{
 
 html{
     background-image: 
-        url(main-hero-s.jpg),
-        url(signup2-alt.jpg),
-        url(signin-bg.jpg);
+        image-url("main-hero-s.jpg"),
+        image-url("signup2-alt.jpg"),
+        image-url("signin-bg.jpg");
     background-size: 0 0;
 }
 
@@ -77,7 +77,7 @@ nav{
 
 // todo: write media queries for this, look at eventbrite
 #main-hero{
-    background-image: url(main-hero-s.jpg), linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
+    background-image: image-url("main-hero-s.jpg"), linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
     background-blend-mode: overlay;;
     background-position: center center;
     background-repeat: no-repeat;
@@ -187,7 +187,7 @@ form abbr[title] {
 
 // sign up form
 #signup-form-bg{
-    background-image: url(signup2-alt.jpg), linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25));
+    background-image: image-url("signup2-alt.jpg"), linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25));
     background-blend-mode: overlay;;
     background-repeat: no-repeat;
     background-size: cover;
@@ -224,7 +224,7 @@ form abbr[title] {
 
 // signin form
 #signin-form-bg{
-    background-image: url(signin-bg.jpg), linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45));
+    background-image: image-url("signin-bg.jpg"), linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45));
     background-blend-mode: overlay;
     background-repeat: no-repeat;
     background-size: cover;
