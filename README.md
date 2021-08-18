@@ -7,3 +7,7 @@ The project description can be seen [here](https://www.theodinproject.com/paths/
 This small web app allows users to sign up, create events and attend events.
 
 The purpose of this project is to get comfortable with many-to-many relationships and foreign keys and class names without relying on the Rails' defaults.
+
+Check it out [live](https://eventlite-sc.herokuapp.com/)!
+
+
