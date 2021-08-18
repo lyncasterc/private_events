@@ -61,12 +61,10 @@ html{
 .remove-links-color a{
     color: inherit
 }
-.card{
-    transition: all 150ms ease-in;
+.bg-none-btn{
+    display: none;
 }
-.card:hover{
-    box-shadow: 0 0.5em 1.5em 0.300em rgba(10, 10, 10, 0.1), 0 0px 1.5em 5px rgba(10, 10, 10, 0.02);
-}
+
 
 nav{
     border-bottom: 1px solid rgba(46,62,72,.12)
@@ -100,9 +98,16 @@ nav{
     opacity: .95;
 }
 
+
 // index event cards 
 .card{
     border-radius: 10px !important;
+    transition: all 150ms ease-in;
+
+}
+
+.card:hover{
+    box-shadow: 0 0.5em 1.5em 0.300em rgba(10, 10, 10, 0.1), 0 0px 1.5em 5px rgba(10, 10, 10, 0.02);
 }
 
 #events-container .column{
@@ -280,35 +285,63 @@ form abbr[title] {
 }
 
 
+
+@media (min-width: 500px ) and (max-width: 768px) {
+    .attendees .column{
+        width: 30% !important;
+    }
+}
+@media(max-width: 1024px){
+
+    .hero .is-halfheight, #main-hero{
+        min-height: 30vh !important;
+    }
+}
+
 @media(max-width: 768px){
     .reverse-columns{
         flex-direction: column-reverse;
         display: flex;
     }
 
-    .attendees .column{
-        width: 40% !important;
-    }
+    
     .profile-image{
         height: 256px ;
         width: 256px ;
     }
 
+    .hero .is-halfheight, #main-hero{
+        min-height: 25vh !important;
+    }
+    
+
 }
+
+
 @media(max-width: 428px){
     
     .profile-image{
         height: 128px;
         width: 128px;
     }
+    .card-column{
+        width: 100% !important;
+    }
 }
 
 @media(max-width: 960px){
-    #signup-bg{
+    #signup-form-bg, #signin-form-bg{
         display: none;
+    }
+    .bg-none-btn{
+        display: block !important;
     }
     
         
 }
-
-
+@media(max-width: 328px){
+    .attendees .column, #attendee-card{
+        width: inherit !important;
+    }
+    
+}

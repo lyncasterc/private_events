@@ -46,7 +46,7 @@
                     <h3 class="title"> Attendees (<%= @event.attendees.count %>) </h3>
                     <div class="columns is-multiline is-variable is-mobile">
                         <% @event.attendees.each do |attendee| %>
-                            <div class="column is-one-quarter ">
+                            <div id="attendee-card" class="column is-one-quarter-fullhd is-one-quarter-widescreen is-one-third-desktop is-two-fifths-tablet is-half-mobile ">
                                 <%= link_to user_path(attendee.id) do %>
                                     <div class="card ">
                                         <div class="card-image">
